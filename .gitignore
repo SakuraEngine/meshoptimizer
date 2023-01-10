@@ -3,3 +3,6 @@
 /gltf/library.wasm
 /.idea/
 /cmake-build-*/
+.xmake
+.vscode
+.history
