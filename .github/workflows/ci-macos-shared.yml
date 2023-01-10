@@ -1,9 +1,9 @@
-name: windows-build-shipping
+name: macos-build-shared
 
 on: [push, pull_request]
   
 jobs:
- build-windows-shipping:
+ macos-windows-shared:
     runs-on: macos-12
     steps:
     - uses: actions/checkout@v2
@@ -16,7 +16,6 @@ jobs:
       id: env
       run: |
         xmake g -c
-        xmake l setup.lua
     - name: Shipping
       run: |
         xmake f -m release --cc=clang-cl --cxx=clang-cl -c -y -v --build_shared=y --policies=build.ccache:n
