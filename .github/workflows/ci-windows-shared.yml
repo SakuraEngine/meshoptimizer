@@ -18,7 +18,7 @@ jobs:
         xmake g -c
     - name: Shipping
       run: |
-        xmake f -m release --toolchain=clang-cl -c -y -v --build_shared=y --policies=build.ccache:n
+        xmake f -m release --toolchain=clang-cl -c -y -v -k shared --policies=build.ccache:n
         xmake -y -v
     - name: UploadShipping
       uses: actions/upload-artifact@v3
